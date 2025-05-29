@@ -131,21 +131,55 @@ button:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espace par défaut entre les dés */
     margin-top: 20px;
-    min-height: 120px;
+    min-height: 150px; /* Ajouté pour un minimum de hauteur */
     align-items: center;
+    transition: gap 0.3s ease; /* Pour animer l'espace entre les dés */
 }
 
-#dice-container-multiple img {
-    width: 80px;
-    height: 80px;
+/* Base pour les images de dés */
+#dice-container-multiple .dice-instance { /* J'utilise ta classe 'dice-instance' */
+    width: 100px; /* Taille par défaut, sera surchargée par les classes spécifiques */
+    height: 100px;
     border: 1px solid #A5D6A7;
     padding: 5px;
     background-color: white;
+    object-fit: contain;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease-out; /* Animation pour la taille et la rotation */
+    border-radius: 10px; /* Bords légèrement arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation de rotation pour les dés */
+/* Tailles spécifiques pour les dés en fonction du nombre */
+#dice-container-multiple.dice-size-1 .dice-instance {
+    width: 180px;
+    height: 180px;
+    gap: 0; /* Pas de gap si un seul dé */
+}
+
+#dice-container-multiple.dice-size-2 .dice-instance {
+    width: 150px;
+    height: 150px;
+    gap: 30px;
+}
+
+#dice-container-multiple.dice-size-3 .dice-instance {
+    width: 120px;
+    height: 120px;
+}
+
+#dice-container-multiple.dice-size-4 .dice-instance {
+    width: 100px;
+    height: 100px;
+}
+
+#dice-container-multiple.dice-size-5 .dice-instance {
+    width: 80px;
+    height: 80px;
+}
+
+/* Animation de rotation pour les dés (gardée telle quelle) */
 @keyframes diceRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -153,6 +187,19 @@ button:active {
 
 .rotating-dice {
     animation: diceRotate 0.345s linear infinite;
+}
+
+/* Style pour l'affichage du résultat du total des dés */
+.result-display {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-display span {
+    color: #007BFF; /* Couleur bleue pour le résultat */
 }
 
 /* --- Styles pour le mode Main --- */
@@ -264,11 +311,34 @@ button:active {
     }
 
     /* Mode Dé */
-    #dice-container-multiple img {
+    #dice-container-multiple .dice-instance { /* Cible spécifiquement les images de dés */
         width: 60px;
         height: 60px;
-        gap: 10px;
+        /* Le gap est déjà géré par #dice-container-multiple */
     }
+
+    /* Ajustements pour les dés sur petits écrans */
+    #dice-container-multiple.dice-size-1 .dice-instance {
+        width: 120px;
+        height: 120px;
+    }
+    #dice-container-multiple.dice-size-2 .dice-instance {
+        width: 100px;
+        height: 100px;
+    }
+    #dice-container-multiple.dice-size-3 .dice-instance {
+        width: 80px;
+        height: 80px;
+    }
+    #dice-container-multiple.dice-size-4 .dice-instance {
+        width: 70px;
+        height: 70px;
+    }
+    #dice-container-multiple.dice-size-5 .dice-instance {
+        width: 50px;
+        height: 50px;
+    }
+
 
     /* Mode Main */
     #hand-container img {
@@ -279,7 +349,7 @@ button:active {
     .shape {
         width: 40px;
         height: 40px;
-        gap: 10px;
+        /* Le gap est déjà géré par #shapes-container */
     }
 
     .shape.square {
