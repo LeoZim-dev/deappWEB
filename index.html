@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAPP MATHS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DEAPP MATHS</h1>
+    </header>
+
+    <main>
+        <section id="main-menu" class="game-mode current-mode">
+            <h2>Choisissez un mode de jeu</h2>
+            <div class="menu-options">
+                <button id="show-dice-mode-button">
+                    <i class="fas fa-dice"></i> Mode Dé
+                </button>
+                <button id="show-hand-mode-button">
+                    <i class="fas fa-hand-paper"></i> Mode Main
+                </button>
+                <button id="show-shapes-mode-button">
+                    <i class="fas fa-shapes"></i> Mode Formes
+                </button>
+                <button id="show-number-mode-button">
+                    <i class="fas fa-hashtag"></i> Mode Nombre
+                </button>
+            </div>
+        </section>
+
+        <section id="mode-de" class="game-mode hidden-mode">
+            <button class="back-to-menu">← Retour au menu</button>
+            <h2>Mode Dé</h2>
+            <div class="dice-controls">
+                <label for="num-dice">Nombre de dés :</label>
+                <select id="num-dice">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button id="roll-dice-button">Lancer les dés</button>
+            </div>
+            <div id="dice-container-multiple">
+                </div>
+        </section>
+
+        <section id="mode-main" class="game-mode hidden-mode">
+            <button class="back-to-menu">← Retour au menu</button>
+            <h2>Mode Main</h2>
+            <div id="hand-container">
+                <img id="hand-image" src="images/main_0.png" alt="Main montrant un nombre" width="150">
+                <img id="second-hand-image" src="images/main_0.png" alt="Deuxième main" width="150" class="hidden-hand-image">
+            </div>
+            <button id="show-hand-button">Montre un nombre (0-5)</button>
+        </section>
+
+        <section id="mode-formes" class="game-mode hidden-mode">
+            <button class="back-to-menu">← Retour au menu</button>
+            <h2>Mode Formes</h2>
+            <p>Compte les formes ci-dessous :</p>
+            <div id="shapes-container">
+                </div>
+            <button id="generate-shapes-button">Nouvelles formes</button>
+        </section>
+
+        <section id="mode-number" class="game-mode hidden-mode">
+            <button class="back-to-menu">← Retour au menu</button>
+            <h2>Mode Nombre</h2>
+            <p>Quel est ce nombre ?</p>
+            <div id="number-display-container">
+                <span id="random-number-display">0</span>
+            </div>
+            <button id="generate-random-number-button">Nouveau nombre</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 DEAPP MATHS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
