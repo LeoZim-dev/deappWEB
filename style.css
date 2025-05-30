@@ -54,59 +54,59 @@ footer {
 }
 
 h1 {
-    font-size: 2.5em; /* Ajuste la taille du titre principal */
+    font-size: 2.5em; /* inchangé */
 }
 
 h2 {
     color: #4CAF50;
-    margin-bottom: 25px;
+    margin-bottom: 25px; /* inchangé */
 }
 
 /* Styles pour les boutons - Maintenant harmonisés avec le thème vert et avec effets */
 button {
     background-color: #66BB6A;
     color: white;
-    padding: 12px 25px;
+    padding: 12px 25px; /* inchangé */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em;
-    margin: 8px;
-    transition: background-color 0.3s ease, transform 0.1s ease-out, box-shadow 0.1s ease-out; /* Ajoute des transitions */
-    display: flex; /* Pour aligner l'icône et le texte */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
+    font-size: 1.1em; /* inchangé */
+    margin: 8px; /* inchangé */
+    transition: background-color 0.3s ease, transform 0.1s ease-out, box-shadow 0.1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-button i { /* Style pour les icônes Font Awesome */
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-    font-size: 1.2em; /* Taille de l'icône */
+button i {
+    margin-right: 10px; /* inchangé */
+    font-size: 1.2em; /* inchangé */
 }
 
 button:hover {
     background-color: #43A047;
-    transform: translateY(-2px); /* Léger soulèvement au survol */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
-    transform: translateY(0); /* Retourne à la position normale au clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre plus légère au clic */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menu-options button {
-    display: flex; /* S'assure que les boutons de menu sont flex */
+    display: flex;
     width: 80%;
-    max-width: 300px;
-    margin: 15px auto;
+    max-width: 300px; /* inchangé */
+    margin: 15px auto; /* inchangé */
 }
 
 /* Bouton Retour au menu */
 .back-to-menu {
     background-color: #EF5350;
-    margin-bottom: 20px;
-    padding: 8px 15px;
-    font-size: 0.9em;
+    margin-bottom: 20px; /* inchangé */
+    padding: 8px 15px; /* inchangé */
+    font-size: 0.9em; /* inchangé */
 }
 
 .back-to-menu:hover {
@@ -115,7 +115,7 @@ button:active {
 
 /* --- Styles pour le mode Dé --- */
 .dice-controls {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* inchangé */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +123,7 @@ button:active {
 }
 
 .dice-controls label, .dice-controls select, .dice-controls button {
-    margin: 5px 10px;
+    margin: 5px 10px; /* inchangé */
     vertical-align: middle;
 }
 
@@ -131,55 +131,55 @@ button:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espace par défaut entre les dés */
-    margin-top: 20px;
-    min-height: 150px; /* Ajouté pour un minimum de hauteur */
+    gap: 28.75px; /* 25px * 1.15 = 28.75px */
+    margin-top: 20px; /* inchangé */
+    min-height: 207px; /* 180px * 1.15 = 207px */
     align-items: center;
-    transition: gap 0.3s ease; /* Pour animer l'espace entre les dés */
+    transition: gap 0.3s ease;
 }
 
 /* Base pour les images de dés */
-#dice-container-multiple .dice-instance { /* J'utilise ta classe 'dice-instance' */
-    width: 100px; /* Taille par défaut, sera surchargée par les classes spécifiques */
-    height: 100px;
+#dice-container-multiple .dice-instance {
+    width: 138px; /* 120px * 1.15 = 138px */
+    height: 138px; /* 120px * 1.15 = 138px */
     border: 1px solid #A5D6A7;
-    padding: 5px;
+    padding: 5px; /* inchangé */
     background-color: white;
     object-fit: contain;
-    transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease-out; /* Animation pour la taille et la rotation */
-    border-radius: 10px; /* Bords légèrement arrondis */
+    transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease-out;
+    border-radius: 10px; /* inchangé */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Tailles spécifiques pour les dés en fonction du nombre */
 #dice-container-multiple.dice-size-1 .dice-instance {
-    width: 180px;
-    height: 180px;
-    gap: 0; /* Pas de gap si un seul dé */
+    width: 253px; /* 220px * 1.15 = 253px */
+    height: 253px; /* 220px * 1.15 = 253px */
+    gap: 0;
 }
 
 #dice-container-multiple.dice-size-2 .dice-instance {
-    width: 150px;
-    height: 150px;
-    gap: 30px;
+    width: 207px; /* 180px * 1.15 = 207px */
+    height: 207px; /* 180px * 1.15 = 207px */
+    gap: 34.5px; /* 30px * 1.15 = 34.5px */
 }
 
 #dice-container-multiple.dice-size-3 .dice-instance {
-    width: 120px;
-    height: 120px;
+    width: 172.5px; /* 150px * 1.15 = 172.5px */
+    height: 172.5px; /* 150px * 1.15 = 172.5px */
 }
 
 #dice-container-multiple.dice-size-4 .dice-instance {
-    width: 100px;
-    height: 100px;
+    width: 138px; /* 120px * 1.15 = 138px */
+    height: 138px; /* 120px * 1.15 = 138px */
 }
 
 #dice-container-multiple.dice-size-5 .dice-instance {
-    width: 80px;
-    height: 80px;
+    width: 115px; /* 100px * 1.15 = 115px */
+    height: 115px; /* 100px * 1.15 = 115px */
 }
 
-/* Animation de rotation pour les dés (gardée telle quelle) */
+/* Animation de rotation pour les dés */
 @keyframes diceRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -192,14 +192,14 @@ button:active {
 /* Style pour l'affichage du résultat du total des dés */
 .result-display {
     text-align: center;
-    margin-top: 20px;
-    font-size: 1.8em;
+    margin-top: 20px; /* inchangé */
+    font-size: 1.8em; /* inchangé */
     font-weight: bold;
     color: #333;
 }
 
 .result-display span {
-    color: #007BFF; /* Couleur bleue pour le résultat */
+    color: #007BFF;
 }
 
 /* --- Styles pour le mode Main --- */
@@ -207,8 +207,14 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    gap: 23px; /* 20px * 1.15 = 23px */
+    margin-bottom: 23px; /* 20px * 1.15 = 23px */
+}
+
+#hand-container img {
+    width: 230px; /* 200px * 1.15 = 230px */
+    height: auto;
+    transition: width 0.3s ease;
 }
 
 .hidden-hand-image {
@@ -220,9 +226,9 @@ button:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-    min-height: 150px;
+    gap: 23px; /* 20px * 1.15 = 23px */
+    margin: 28.75px 0; /* 25px * 1.15 = 28.75px */
+    min-height: 207px; /* 180px * 1.15 = 207px */
     align-items: center;
 }
 
@@ -233,19 +239,20 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 0.8em; /* inchangé */
     color: white;
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .shape.square {
-    width: 50px;
-    height: 50px;
+    width: 69px; /* 60px * 1.15 = 69px */
+    height: 69px; /* 60px * 1.15 = 69px */
 }
 
 .shape.circle {
-    width: 50px;
-    height: 50px;
+    width: 69px; /* 60px * 1.15 = 69px */
+    height: 69px; /* 60px * 1.15 = 69px */
     border-radius: 50%;
 }
 
@@ -256,14 +263,14 @@ button:active {
     border-top: none;
     border-color: transparent;
     box-sizing: content-box;
-    transform: translateY(10px);
+    transform: translateY(13.8px); /* 12px * 1.15 = 13.8px */
 }
 
 /* --- Styles pour le Mode Nombre --- */
 #number-display-container {
-    margin: 30px auto;
+    margin: 46px auto; /* 40px * 1.15 = 46px */
     width: fit-content;
-    padding: 20px 40px;
+    padding: 28.75px 57.5px; /* 25px * 1.15 = 28.75px ; 50px * 1.15 = 57.5px */
     border: 3px solid #81C784;
     border-radius: 10px;
     background-color: #F1F8E9;
@@ -271,7 +278,7 @@ button:active {
 }
 
 #random-number-display {
-    font-size: 5em;
+    font-size: 6.9em; /* 6em * 1.15 = 6.9em */
     font-weight: bold;
     color: #388E3C;
     display: block;
@@ -282,23 +289,23 @@ button:active {
 /* --- Media Queries pour les smartphones (écrans plus hauts que larges) --- */
 @media (max-width: 768px) and (orientation: portrait) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* inchangé */
     }
 
     h2 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
+        font-size: 1.5em; /* inchangé */
+        margin-bottom: 15px; /* inchangé */
     }
 
     button {
-        padding: 10px 20px;
-        font-size: 1em;
-        margin: 5px;
+        padding: 10px 20px; /* inchangé */
+        font-size: 1em; /* inchangé */
+        margin: 5px; /* inchangé */
     }
 
     button i {
-        margin-right: 8px; /* Ajuste l'espace pour les icônes sur petits écrans */
-        font-size: 1em; /* Ajuste la taille de l'icône */
+        margin-right: 8px; /* inchangé */
+        font-size: 1em; /* inchangé */
     }
 
     .menu-options button {
@@ -306,75 +313,71 @@ button:active {
     }
 
     .game-mode {
-        padding: 20px;
+        padding: 20px; /* inchangé */
         max-width: 95%;
     }
 
-    /* Mode Dé */
-    #dice-container-multiple .dice-instance { /* Cible spécifiquement les images de dés */
-        width: 60px;
-        height: 60px;
-        /* Le gap est déjà géré par #dice-container-multiple */
+    /* Mode Dé - Ajustements pour les dés sur petits écrans */
+    #dice-container-multiple .dice-instance {
+        width: 92px; /* 80px * 1.15 = 92px */
+        height: 92px; /* 80px * 1.15 = 92px */
     }
-
-    /* Ajustements pour les dés sur petits écrans */
     #dice-container-multiple.dice-size-1 .dice-instance {
-        width: 120px;
-        height: 120px;
+        width: 161px; /* 140px * 1.15 = 161px */
+        height: 161px; /* 140px * 1.15 = 161px */
     }
     #dice-container-multiple.dice-size-2 .dice-instance {
-        width: 100px;
-        height: 100px;
+        width: 138px; /* 120px * 1.15 = 138px */
+        height: 138px; /* 120px * 1.15 = 138px */
     }
     #dice-container-multiple.dice-size-3 .dice-instance {
-        width: 80px;
-        height: 80px;
+        width: 115px; /* 100px * 1.15 = 115px */
+        height: 115px; /* 100px * 1.15 = 115px */
     }
     #dice-container-multiple.dice-size-4 .dice-instance {
-        width: 70px;
-        height: 70px;
+        width: 103.5px; /* 90px * 1.15 = 103.5px */
+        height: 103.5px; /* 90px * 1.15 = 103.5px */
     }
     #dice-container-multiple.dice-size-5 .dice-instance {
-        width: 50px;
-        height: 50px;
+        width: 80.5px; /* 70px * 1.15 = 80.5px */
+        height: 80.5px; /* 70px * 1.15 = 80.5px */
     }
 
 
-    /* Mode Main */
+    /* Mode Main - mobile */
     #hand-container img {
-        width: 100px;
+        width: 172.5px; /* 150px * 1.15 = 172.5px */
     }
 
-    /* Mode Formes */
+    /* Mode Formes - mobile */
     .shape {
-        width: 40px;
-        height: 40px;
-        /* Le gap est déjà géré par #shapes-container */
+        width: 57.5px; /* 50px * 1.15 = 57.5px */
+        height: 57.5px; /* 50px * 1.15 = 57.5px */
     }
 
     .shape.square {
-        width: 40px;
-        height: 40px;
+        width: 57.5px; /* 50px * 1.15 = 57.5px */
+        height: 57.5px; /* 50px * 1.15 = 57.5px */
     }
 
     .shape.circle {
-        width: 40px;
-        height: 40px;
+        width: 57.5px; /* 50px * 1.15 = 57.5px */
+        height: 57.5px; /* 50px * 1.15 = 57.5px */
     }
 
     .shape.triangle {
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 34.6px solid;
-        transform: translateY(7px);
+        border-left: 28.75px solid transparent; /* 25px * 1.15 = 28.75px */
+        border-right: 28.75px solid transparent; /* 25px * 1.15 = 28.75px */
+        border-bottom: 49.8px solid; /* 43.3px * 1.15 = 49.795px, arrondi à 49.8px */
+        transform: translateY(10.35px); /* 9px * 1.15 = 10.35px */
     }
 
-    /* Mode Nombre */
+    /* Mode Nombre - mobile */
     #number-display-container {
-        padding: 15px 30px;
+        padding: 23px 46px; /* 20px * 1.15 = 23px ; 40px * 1.15 = 46px */
     }
 
     #random-number-display {
-        font-size: 4em;
+        font-size: 5.75em; /* 5em * 1.15 = 5.75em */
     }
 }
