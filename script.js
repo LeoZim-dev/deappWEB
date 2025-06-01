@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Assure-toi que les chemins des fichiers audio sont corrects et qu'ils existent !
     const buttonClickSound = new Audio('sounds/button-click.mp3');
     const diceRollSound = new Audio('sounds/dice-roll.mp3');
-    const revealSound = new Audio('sounds/reveal-sound.mp3');
+    // REMARQUE : La variable 'revealSound' n'est plus définie ici car nous utilisons 'buttonClickSound' à la place.
 
     // Fonction utilitaire pour jouer un son (permet de s'assurer qu'il est rejouable)
     function playSound(audioElement) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fonction pour montrer une section et cacher les autres
     function showSection(sectionToShow) {
-        playSound(buttonClickSound);
+        playSound(buttonClickSound); // Utilise le son de clic pour la navigation
 
         const allSections = document.querySelectorAll('.game-mode');
         allSections.forEach(section => {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gestionnaires d'événements pour les boutons "Retour au menu"
     backToMenuButtons.forEach(button => {
         button.addEventListener('click', () => {
-            playSound(buttonClickSound);
+            playSound(buttonClickSound); // Utilise le son de clic pour le retour au menu
             showSection(mainMenu);
             const secondHandImage = document.getElementById('second-hand-image');
             if (secondHandImage) {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (numDiceSelect) {
         numDiceSelect.addEventListener('change', () => {
-            playSound(buttonClickSound);
+            playSound(buttonClickSound); // Utilise le son de clic pour le changement de dés
             initializeDiceMode();
         });
     }
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (rollDiceButton) {
         rollDiceButton.addEventListener('click', () => {
-            playSound(diceRollSound);
+            playSound(diceRollSound); // Garde le son spécifique de lancer de dés
 
             const diceElements = document.querySelectorAll('#dice-container-multiple .dice-instance');
             let currentTotal = 0;
@@ -197,8 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (triggerHandButton) {
         triggerHandButton.addEventListener('click', () => {
-            playSound(revealSound);
-
+            playSound(buttonClickSound); // MODIFIÉ : utilise buttonClickSound ici
             const randomNumber = Math.floor(Math.random() * (maxHandNumber + 1));
             if (handImage) handImage.src = handImages[randomNumber];
 
@@ -229,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Conteneur des formes non trouvé.");
             return;
         }
-        playSound(revealSound);
+        playSound(buttonClickSound); // MODIFIÉ : utilise buttonClickSound ici
 
         shapesContainer.innerHTML = '';
 
@@ -274,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Élément d'affichage du nombre non trouvé.");
             return;
         }
-        playSound(revealSound);
+        playSound(buttonClickSound); // MODIFIÉ : utilise buttonClickSound ici
         const randomNumber = Math.floor(Math.random() * 11);
         randomNumberDisplay.textContent = randomNumber;
     }
